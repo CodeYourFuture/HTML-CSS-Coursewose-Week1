@@ -6,3 +6,160 @@
  *    for example: General styles, Navigation styles, Hero styles, Footer etc.
  * 
  */
+
+/* General styling for page */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0efeb;
+    color: #fff;
+    font-family: sans-serif;
+    /* align-items: center;
+    justify-content: center; */
+    height: 100vh;
+    width: 100vw;
+    /*overflow: hidden;*/
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Navigation and Header styles */
+
+#header {
+    background-color: #cb997e;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+}
+
+#header-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 10vw;
+    max-height: 10vh;
+    border-radius: 50%;
+    flex: 0.5;
+}
+
+#nav-bar {
+    flex: 5;
+}
+
+#nav-bar ul li{
+    list-style: none;
+    display: inline;
+}
+
+#nav-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Main content styles */
+
+#main {
+    width: 100%;
+    max-width: 80vw;
+    margin: auto;
+}
+
+/*  trying to use first-child */
+.grid-tv-shows section:first-child{
+    border: 4px solid red;
+    min-width: 80vw;
+}
+
+.grid-movies section:first-child {
+    border: 4px solid lime;
+    min-width: 80vw;
+}
+
+.grid-web-series section:first-child {
+    border: 4px solid purple;
+    min-width: 80vw;
+}
+
+/* Hero/About us section styles */
+
+.about-us-header {
+    background-color: #cb997e;
+}
+
+.about-us {
+    background-color: #fff1e7;
+    height: 20vh;
+}
+
+/* Section styles */
+
+.section1 {
+    display: inline;
+}
+
+.grid-tv-shows{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.section2 {
+    display: inline;
+}
+
+.grid-movies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.section3 {
+    display: inline;
+}
+
+.grid-web-series {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.tv-shows-section,.movies-section,.web-series-section {
+    text-align: center;
+}
+
+.favourites {
+    flex: 1;
+}
+
+section .favourites .featured {
+    display: inline;
+    width: 100%;
+}
+
+.featured-background {
+    width: 50%;
+    max-height: 200px;
+    margin: auto;
+}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 150px;
+}
+
+/* Footer style */
+footer {
+    display:flex;
+}
+
+#contact {
+    justify-content: center;
+}
