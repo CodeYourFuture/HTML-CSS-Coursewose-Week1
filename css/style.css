@@ -6,3 +6,99 @@
  *    for example: General styles, Navigation styles, Hero styles, Footer etc.
  * 
  */
+
+ /**need to think why doing box-sizing**/
+ * {
+     box-sizing: border-box;
+ }
+ 
+img {
+    border-radius: 5px;
+    border-color:silver;
+    border: 5px solid rgb(196, 201, 57);
+
+}
+
+
+body {
+    background-color: #DDFFBC;
+    padding: 50px;
+    margin:20;
+   
+}
+
+header {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    text-align:center;
+    padding: 10px;
+    font-size: 2.2rem;
+    
+}
+
+h1 {
+    color:#52734D;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 20px;
+    margin: 20px;
+}
+
+h2 {
+    color: #91C788;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+h3 {
+     color: #91C788;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 5px;
+    margin: 20px;
+}
+p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-indent: 50px;
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px;
+    color:rgb(196, 201, 57);
+}
+
+a:link {
+  color:rgb(196, 201, 57);
+  text-decoration: none;
+  
+}
+
+a:visited  {
+color:#2cce14;
+text-decoration: none;
+
+}
+
+a:hover {
+    color:rgb(196, 201, 57);
+    text-decoration: none;
+}
+article:first-child {
+    color:rgb(196, 201, 57);
+    font-size: 20px;
+}
+
+
+footer  {
+    font-family: 'Courier New', Courier, monospace;
+    text-align:center;
+    padding: 20px;
+    margin: 20px;
+
+}
+
+.flex-container {
+    display: flex;
+    background-color:  #FEFFDE;
+    flex-wrap:wrap;
+    border-radius: 10px;
+}
