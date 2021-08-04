@@ -1,8 +1,908 @@
-/**
- * Add your custom styles below
- * 
- * Remember: 
- * - Be organised, use comments and separate your styles into meaningful chunks
- *    for example: General styles, Navigation styles, Hero styles, Footer etc.
- * 
- */
+html, body, main{
+  height:100%;
+  width:100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+  
+}
+
+header, main{
+   display: flex;
+   flex-flow: row wrap;
+   width:100%;
+   
+   /* order:1; */
+}
+
+
+header{
+   padding-top:20px;
+   height: 100px;
+   position: fixed;
+   display: flex;
+   background-color: rgba(199, 200, 202, 0.815);
+   padding-bottom: 20px;
+   background: url("https://raw.githubusercontent.com/wiamnasr/HTML-CSS-Coursework-Week1/master/header-img.jpg");
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   order:1;
+   
+}
+
+.header .logo {
+   display: inline-block;
+   float: left;
+   width:30%;
+   height:90%;
+   
+   position:relative;
+   padding-left: 10px;
+   padding-top: 0px;
+   order:1;
+   
+}
+
+.logo img{
+   max-width:100%;
+   max-height:100%;
+   border-radius: 50%;
+   
+}
+
+.container {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  width:70%;
+  position:absolute;
+  /* order:2; */
+  left:80%;
+
+}
+
+.menu {
+  padding-top: 13px;
+  width:200px;
+  height:auto;
+  position:absolute;
+  transform: translate(500px, 0);
+  transition:transform 0.3s ease;
+  background:rgba(119, 113, 118, 0.959);
+  border-radius: 20%;
+  
+}
+.menu li:hover{
+  background-color: rgba(128, 128, 128, 0.486);
+  border-style: groove;
+  
+  
+  font-size: 50px;
+  font-weight:600;
+}
+
+.menu a:hover{
+  text-decoration: none;
+  color:rgb(92, 22, 86);
+  font-size: 30px;
+  font-weight:400;
+  opacity:0.8;
+  
+}
+
+.menu-two{display:none;}
+
+.menu a{
+  
+  text-decoration:none;
+  font-size: 20px;
+  font-weight:bold;
+  color:rgb(247, 247, 247);
+  padding: -1.5em;
+}
+
+li {
+  list-style: none;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change .menu {
+  -webkit-transform: translate(-150px, 0);
+  
+}
+
+
+
+/* Welcome section */
+
+/* .welcome-section{
+  display: flex;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("welcome-section.jpg");
+  max-width: 100%;
+  height:50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative
+} */
+
+
+
+.big-container{
+  margin-top: 101px;
+  display: flex;
+  flex-flow: row wrap;
+  width:100%;
+  height:800px;
+  justify-content: center;
+  text-align: center;
+  order:3;
+  
+  
+}
+
+.big-container .welcome-section{
+  width:100%;
+  height:30%;
+  
+  background-image:url("https://raw.githubusercontent.com/wiamnasr/HTML-CSS-Coursework-Week1/master/welcome-img.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  order:5;
+
+}
+
+.welcome-section_text{
+  color:rgb(240, 243, 243);
+  display: flex;
+  flex-flow: row wrap;
+  
+  max-width: 100%;
+  height: 100px;
+  font-weight: bold;
+  position: relative;
+  top:50%;
+  background-color: rgba(199, 200, 202, 0.815);
+  justify-content: center;
+  
+  
+}
+
+.welcome-section_text h1{
+  width: 100%;
+  max-height: 50%;
+  
+  font-size:30px;
+  font-weight: bold;
+  position: relative;
+  
+  top:5px;
+  
+  
+  
+}
+
+.welcome-section_text p{
+  max-width: 100%;
+  font-size: 20px;
+  max-height: 50%;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  height:auto;
+  margin: 0 auto;
+  background-image: url("https://raw.githubusercontent.com/wiamnasr/HTML-CSS-Coursework-Week1/master/timeline-img.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  order:7;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  
+  background-color: rgb(145, 55, 55);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: rgba(199, 200, 202, 0.801);
+  position: relative;
+  border-radius: 6px;
+  color:white;
+  font-weight: 600;
+  font-weight: 550;
+  max-width: 100%;
+}
+
+.skills-bar{
+  width:100%;
+  margin-top: 80px;
+  background-color: rgba(199, 200, 202, 0.267);
+  color: rgb(88, 83, 83);
+  font-size: 40px;
+  font-weight: bold;
+  order:9;
+}
+
+.coding-language {
+  width:100%;
+  background-color: rgba(199,200,202,255);
+
+}
+
+.skills {
+  text-align: right;
+  padding-top:10px;
+  padding-bottom:10px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.html {width:35%; background-color:rgba(0, 128, 0, 0.945);}
+.css {width:20%; background-color:rgba(0, 0, 255, 0.925);}
+.js {width:5%; background-color: rgba(255, 0, 0, 0.918);}
+.py {width:5%; background-color:rgba(71, 70, 70, 0.932);}
+
+.mind-maps {
+  margin-top: 80px;
+  width:100%;
+  display: flex;
+  flex-flow: row wrap;
+  order:11;
+  
+}
+
+.mind-maps h2{
+  width:100%;
+  font-size: 60px;
+  font-weight: bolder;
+  background-color: rgba(217, 188, 235, 0.897);
+  color: rgba(255, 255, 255, 0.979);
+}
+
+.mind-maps iframe {
+  width:100%;
+  height:300px;
+}
+
+.form{
+  margin-top: 80px;
+  width:100%;
+  height:600px;
+  order:13;
+}
+
+form {
+  border: 4px solid #f1f1f1;
+}
+
+.subscribe-container {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* Styling input elements and submit button */
+input[type=text], input[type=submit] {
+  width:100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* margins or checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* style for submit button */
+input[type=submit] {
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity:0.8;
+}
+
+
+.contact-section {
+  width:100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  order:15;
+}
+
+.contact-section-header {
+  width:100%;
+  background-color:rgba(63, 61, 63, 0.938);
+  color:rgba(245, 245, 245, 0.815);
+  
+}
+
+.contact-links {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.contact-section .contact-links .fa {
+  /* padding: 20px; */
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.articles{
+  width:100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 60px;
+  height: 200px;
+  background-color: rgba(224, 183, 236, 0.781);
+  order:17;
+}
+
+.articles h2 {
+  width:100%;
+  background-color:rgba(63, 61, 63, 0.938);
+  justify-content: center;
+  height:50px;
+  color: rgba(245, 245, 245, 0.815);
+
+}
+
+.articles #linkedin-articles {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width:100%;
+  margin-top: 0px;
+  
+  
+}
+
+#linkedin-articles :first-child, #linkedin-articles :last-child{
+  width: 40%;
+  height:100px;
+  border-radius: 50%;
+  border:none;
+}
+
+
+
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .timeline-container {
+    width: 100%;
+    height: 360px;
+    padding-left: 70px;
+    padding-right: 25px;
+    top:40px;
+  }
+
+  .timeline-container .content h2, .timeline-container .content p{
+    color:white;
+    font-weight: 600;
+    font-weight: 550;
+    max-width: 100%;
+    
+  }
+  
+
+  .timeline-container .content h2 {
+    font-size: 30px;
+    
+  }
+
+  .timeline-container .content p {
+    font-size: 20px;
+  }
+
+
+
+/* Make sure that all arrows are pointing leftwards */
+  .timeline-container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+/* @media screen and (min-width: 1000px) {
+  body {
+    display:none;
+  }
+} */
+
+/* Minor Breakpoints */
+@media screen and (min-width: 450px) {
+  .timeline-container .content h2 {
+    font-size: 40px;
+    
+  }
+
+  .timeline-container .content p {
+    font-size: 30px;
+  }
+  .articles{
+    height:300px;
+  }
+  .articles #zero-carbon, .articles #lemons-lemonade{
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .articles{
+    display: flex;
+    height:50%;
+    justify-content:space-evenly;
+    margin-top: 100px;
+    
+  }
+  .articles #zero-carbon, .articles #lemons-lemonade{
+    height: 90%;
+    width: 30%;
+  }
+}
+
+/* major breakpoints */
+
+@media screen and (min-width: 850px) {
+  .container{
+    display: none;
+  }
+  .menu-two {
+    width:100%;
+    display: flex;
+    justify-content:space-around;
+    background-color: darkgrey;
+    font-size: 20px;
+    order: 100;
+  }
+
+
+
+
+  .menu-two li {
+    
+    height:68px;
+    margin-top: 20px;
+  }
+
+  .menu-two li a {
+    color:whitesmoke;
+    text-decoration: none;
+    font-size:25px;
+    font-weight: 600;
+    width: 88px;
+
+
+  }
+
+
+
+  
+
+
+
+  .menu-two li :hover {
+    opacity:0.8;
+    border: groove rgba(238, 130, 238, 0.445);
+    color:rgba(88, 45, 88, 0.884)
+  }
+
+
+
+  .header{
+    display: flex;
+    flex-flow: row wrap;
+    height:300px;
+    justify-content: center;
+    
+  }
+
+  .header .logo {
+    width: 100%%;
+    order:2;
+    display: flex;
+    justify-content: center;
+    
+
+  }
+
+  
+
+ 
+
+  .header .logo img {
+    width:250px;
+    height:220px;
+    border-style: groove;
+    
+  }
+
+
+
+  .big-container{
+    margin-top: 345px;
+
+  }
+
+  .big-container .welcome-section{
+    height:600px;
+    
+  }
+  .welcome-section_text {
+    height: 200px;
+  }
+
+  .welcome-section_text h1 {
+    font-size: 60px;
+    color:white;
+  }
+  .welcome-section_text p {
+    font-size: 40px;
+  }
+
+
+
+  .skills-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width:30%;
+    margin: 250px 0 0 10%;
+    height: 300px;
+    order:11
+    
+    
+  }
+
+  
+  .mind-maps {
+    width:50%;
+    height: 300px;
+    border: none;
+    order:9;
+    margin: 300px 0 0 0;
+    border-radius: 50%;
+    border-style: groove;
+    border-color: rgb(153, 113, 153);
+    border-inline-width: 100px;
+  }
+
+  .form{
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+    width:50%;
+   
+
+  }
+
+  .form .subscribe-container h2 {
+    font-size: 50px;
+    color:whitesmoke;
+    background-color: rgba(44, 37, 37, 0.486);
+  }
+
+  .form .subscribe-container p {
+    font-size: 30px;
+
+  }
+
+  .form .subscribe-container p:hover {
+    color:whitesmoke;
+    background-color: rgba(144, 98, 150, 0.486);
+    opacity:0.8;
+    
+  }
+
+  .contact-section {
+    margin-top: 100px;
+    width: 80%;
+  }
+
+  .contact-section .contact-links{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .contact-section h2, .articles h2 {
+    font-size: 50px;
+  }
+
+}
+
+@media screen and (min-width:1100px) {
+  .header {
+    background-size: 80% 100%;
+    background-position: center;
+    background-color: rgba(199, 200, 202, 0.815);
+    border:none;
+  }
+
+  .menu-two li a {
+    font-size: 30px;
+  }
+
+  .menu-two li :hover {
+    font-size: 50px;
+  }
+
+  .big-container .welcome-section {
+    background-size: 80% 100%;
+    background-color: rgba(199, 200, 202, 0.815);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .welcome-section_text {
+    border-radius: 50%;
+    width:60%;
+    height:50%;
+    align-items: center;
+    margin-top:10%;
+    position:static;
+
+
+  }
+
+  .welcome-section_text h1 {
+    position:static;
+    max-width: 60%;
+  }
+
+  .welcome-section_text p {
+    width:50%;
+    font-size: 30px;
+  }
+
+ 
+
+  .timeline {
+    width:100%;
+    background-color: rgba(26, 69, 155, 0.247);
+    border:none;
+    background-image: url("https://raw.githubusercontent.com/wiamnasr/HTML-CSS-Coursework-Week1/master/bigScreen-timeline.jpg");
+    background-size: 80% 80%;
+    background-position: center;
+    
+  }
+
+  .timeline-container {
+    width:50%
+  }
+
+  .articles{
+    order:7;
+    margin-top: 250px;
+    padding: 300px 0 0 0;
+    height:1200px;
+    background-color:rgba(199, 200, 202, 0.815);
+    
+  }
+  
+  .articles h2 {
+    font-size: 60px;
+    height: 100px;
+  }
+
+  #linkedin-articles :first-child, #linkedin-articles :last-child{
+    width: 45%;
+    height:700px;
+    border-radius: 10%;
+    border-style: groove;
+    border-width: 35px;
+    border-color: rgba(26, 69, 155, 0.247);
+    
+  }
+
+  .mind-maps{
+    margin-top: 200;
+    padding-top: 100px;
+    
+    background-color: rgba(26, 69, 155, 0.247);
+    width:80%;
+    height: 1000px;
+  }
+
+  .mind-maps h2 {
+    height:10%;
+  }
+  
+  .mind-maps .relative {
+    height:90%;
+  }
+
+  .skills-bar {
+    margin-top: 200px;
+    width:45%;
+    height: 100%;
+    margin-left: 30px;
+  }
+
+  .form {
+    width:500px;
+    height: 490px;
+    margin-left: 60px; 
+
+
+  }
+
+  .contact-section .contact-section-header h2 {
+    font-size: 60px;
+  }
+  
+
+
+
+
+}
+
+@media screen and (min-width:1500px) {
+  .header {
+    background-size: 70% 100%;
+  }
+  .big-container .welcome-section {
+    background-size: 70% 100%;
+    
+  }
+
+}
