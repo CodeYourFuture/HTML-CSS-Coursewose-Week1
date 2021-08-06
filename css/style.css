@@ -1,8 +1,176 @@
-/**
- * Add your custom styles below
- * 
- * Remember: 
- * - Be organised, use comments and separate your styles into meaningful chunks
- *    for example: General styles, Navigation styles, Hero styles, Footer etc.
- * 
- */
+* {
+  font-family: Tahoma;
+}
+
+body {
+  background-color: #161616;
+  border: none;
+}
+
+header {
+  border: none;
+  /* position: fixed; */
+  top: 0px;
+  left: 0px;
+  background-color: #161616;
+  width: 100%;
+  /* z-index: 10; */
+}
+
+header img {
+  height: 88px;
+  width: 208px;
+  border: none;
+}
+
+.img-heading {
+  display: flex;
+  font-size: 125%;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.img-heading h1 {
+  color: #c84b31;
+  text-align: left;
+  margin: 0px 0px 0px 5px;
+  padding: 0px 10px 0px 10px;
+  border: none;
+}
+
+header p {
+  text-align: center;
+  color: #346751;
+}
+.nav-bar {
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+header ul {
+  margin: 0px auto;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+.list-item {
+  color: #346751;
+  border: 1px solid #ecdbba;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+}
+
+.list-item:hover {
+  background: #ecdbba;
+}
+
+a {
+  color: #346751;
+  border: none;
+  text-decoration: none;
+}
+
+.question h3 {
+  margin: 40px 0px 50px 0px;
+  text-align: center;
+  color: #c84b31;
+}
+
+.row.force-height > div {
+  height: 50px;
+}
+
+.card {
+  background-color: #161616;
+  color: #c84b31;
+}
+
+.card img {
+  height: 25rem;
+}
+.card h5 {
+  color: #346751;
+}
+
+#art1 {
+  margin: 70px auto 10px auto;
+  width: 550px;
+  border: 1px solid #ecdbba;
+  border-radius: 20px;
+}
+
+#art2,
+#art3,
+#art4 {
+  margin: 60px auto 50px auto;
+  width: 550px;
+}
+
+.articles h3 {
+  color: #346751;
+  text-align: center;
+}
+
+.articles p {
+  color: #c84b31;
+  padding: 0 0 20px 0;
+}
+
+.articles article:first-child {
+  font-size: 110%;
+  font-weight: 600;
+}
+
+.playerlinks {
+  text-align: center;
+  font-size: 75%;
+}
+
+.articles article:nth-child(1),
+.articles article:nth-child(2) {
+  margin: 30px 0px 30px 0px;
+}
+
+.articles article:first-child img,
+.articles article:nth-child(3) img {
+  float: left;
+  height: 184px;
+  width: 124px;
+  margin: 0px 20px 10px 0px;
+  border-radius: 10px;
+}
+
+.articles article:nth-child(2) img {
+  float: right;
+  height: 184px;
+  width: 124px;
+  margin: 0px 20px 10px 0px;
+  border-radius: 10px;
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+}
+
+footer h4 {
+  color: #346751;
+  text-align: center;
+  margin: 5px 0 0 0;
+}
+
+footer p {
+  color: #346751;
+  text-align: center;
+  margin: 5px 0 0 0;
+}
+
+footer a {
+  color: #c84b31;
+}
